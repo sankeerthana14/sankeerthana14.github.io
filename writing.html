@@ -1,0 +1,100 @@
+
+---
+layout: default
+title: Writing
+description: "Writing on AI safety, interpretability, research, and ideas in progress."
+permalink: /writing/
+---
+
+<section class="writing-page-hero">
+
+  <span class="eyebrow">
+    WRITING / NOTES FROM THE RESEARCH DESK
+  </span>
+
+  <h1>
+    Thinking, in public<span class="brand-dot">.</span>
+  </h1>
+
+  <p>
+    A growing collection of notes on AI safety,
+    papers I'm reading, experiments I'm trying,
+    and questions I haven't quite figured out yet.
+  </p>
+
+  <div class="writing-types">
+    <span>Research notes</span>
+    <span>Paper reflections</span>
+    <span>Concept explainers</span>
+  </div>
+
+</section>
+
+
+<section class="writing-archive">
+
+  <div class="archive-heading">
+
+    <span class="eyebrow">THE ARCHIVE</span>
+
+    <span>
+      {{ site.posts.size }}
+      {% if site.posts.size == 1 %}
+        PIECE
+      {% else %}
+        PIECES
+      {% endif %}
+    </span>
+
+  </div>
+
+  {% if site.posts.size > 0 %}
+
+    {% for post in site.posts %}
+
+    <a class="archive-item" href="{{ post.url | relative_url }}">
+
+      <div class="archive-date">
+        {{ post.date | date: '%d %b %Y' }}
+      </div>
+
+      <div class="archive-main">
+
+        <h2>{{ post.title }}</h2>
+
+        {% if post.description %}
+          <p>{{ post.description }}</p>
+        {% else %}
+          <p>
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+          </p>
+        {% endif %}
+
+      </div>
+
+      <span class="archive-arrow">↗</span>
+
+    </a>
+
+    {% endfor %}
+
+  {% else %}
+
+    <div class="archive-empty">
+
+      <div class="archive-empty-glyph">✳</div>
+
+      <h2>The first page is still blank.</h2>
+
+      <p>
+        This space will gradually fill with research
+        notes, experiments, and ideas worth sharing.
+        Writing is part of the work, not something
+        that only happens after it.
+      </p>
+
+    </div>
+
+  {% endif %}
+
+</section>
