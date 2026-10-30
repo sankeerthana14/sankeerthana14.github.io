@@ -1,0 +1,35 @@
+
+# Main PhD research projects
+
+- number: "01"
+  short_title: "BRIDGE"
+  category: "Medical LLM safety"
+  status: "Revision submitted"
+  title: "Helping medical LLMs recognise insufficient evidence"
+  summary: "A detection-guided approach that probes for evidence insufficiency and selectively applies safer response interventions when a model may otherwise answer without adequate support."
+  tags:
+    - "Linear probes"
+    - "Evidence insufficiency"
+    - "Safety interventions"
+
+- number: "02"
+  short_title: "PROVE-RAG"
+  category: "Trustworthy agentic RAG"
+  status: "Manuscript in revision"
+  title: "Deciding whether to answer, retrieve, or verify"
+  summary: "A provenance-aware evidence-state framework for agentic retrieval. It distinguishes sufficient, insufficient, contradicted, and superseded evidence to guide what an agent should do next."
+  tags:
+    - "Provenance"
+    - "Agentic RAG"
+    - "Evidence states"
+
+- number: "03"
+  short_title: "FLEXA"
+  category: "Robust medical AI"
+  status: "PhD research"
+  title: "Robust and explainable federated medical imaging"
+  summary: "Research on federated medical image segmentation, combining consensus optimisation and perturbation consistency to improve segmentation and explanation stability."
+  tags:
+    - "Federated learning"
+    - "Medical imaging"
+    - "Robustness"
