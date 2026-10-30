@@ -1,42 +1,16 @@
 
 ---
-layout: default
+layout: home
 title: Home
+permalink: /
+hero_kicker: "PhD researcher · AI safety & reliability"
+hero_line_one: "When should an AI"
+hero_line_two: "trust its own answer?"
+hero_description: "I study how language models represent evidence and their own behaviour, how to recognise safety-relevant signals, and how to intervene before unreliable answers lead to harm."
 ---
 
-# Hi, I'm Sankeerthana!
+I'm **Sankeerthana**, a PhD student in Computer Science at **Nanyang Technological University (NTU), Singapore**. I'm interested in understanding how language models work, especially how they represent information about their own behaviour and how we can make AI systems more reliable.
 
-I'm a PhD student in Computer Science at Nanyang Technological University (NTU), Singapore.
+My research sits at the intersection of **AI safety, interpretability, and reliable machine learning**. I work on evidence-aware medical LLMs, trustworthy retrieval-augmented systems, and robust learning, while exploring model introspection and monitoring of safety-relevant internal states.
 
-I'm interested in understanding how language models work, particularly how they represent information about their own behaviour, how they learn, and how we can make AI systems more reliable.
-
-This is a little space on the internet where I share my research, things I'm reading, and ideas I'm exploring.
-
-## A little about my research
-
-My current interests include:
-
-- Language Model Introspection and Metacognition
-- Mechanistic Interpretability
-- Deceptive Alignment and Model Behaviour
-- Reliability and Safety of Large Language Models
-
-## Research
-
-### BRIDGE
-Detecting evidence insufficiency in medical language models through internal representations and selective interventions.
-
-*Manuscript under review.*
-
-### PROVE-RAG
-Investigating evidence provenance, sufficiency, and reliability in retrieval-augmented generation systems.
-
-*Manuscript under revision.*
-
-## Writing & Notes
-
-I enjoy reading papers and thinking about how language models work. I'll be sharing my thoughts, research notes, and experiments here.
-
-## Elsewhere
-
-[GitHub](https://github.com/sankeerthana14)
+This is also a space for things I'm reading, questions I'm asking, and ideas I'm still figuring out.
