@@ -1,4 +1,29 @@
-title: Sankeerthana
-description: Personal website — research, writing, and things I'm exploring.
-theme: jekyll-theme-cayman
+
+title: "Sankeerthana"
+description: "Research, writing, and ideas on AI safety, model introspection, and reliable AI."
+
+url: "https://sankeerthana14.github.io"
+baseurl: ""
+
 markdown: kramdown
+permalink: /writing/:title/
+timezone: Asia/Singapore
+
+# Contact information
+email: ""
+github_url: "https://github.com/sankeerthana14"
+linkedin_url: ""
+cv_url: ""
+
+# Use the custom post layout
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
