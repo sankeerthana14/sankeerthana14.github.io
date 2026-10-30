@@ -1,0 +1,388 @@
+
+---
+layout: default
+---
+
+<!-- HERO SECTION -->
+
+<section class="hero" aria-labelledby="hero-title">
+
+  <div class="hero-copy">
+
+    <p class="hero-kicker">
+      <span class="pulse"></span>
+      {{ page.hero_kicker }}
+    </p>
+
+    <h1 id="hero-title">
+      <span>{{ page.hero_line_one }}</span>
+      <em>{{ page.hero_line_two }}</em>
+    </h1>
+
+    <p class="hero-description">
+      {{ page.hero_description }}
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="primary-link" href="#research">
+        Explore my research <span>↗</span>
+      </a>
+
+      <a class="quiet-link" href="{{ '/writing/' | relative_url }}">
+        Read my writing ↗
+      </a>
+
+    </div>
+
+    <div class="hero-meta">
+      <span>Based in Singapore</span>
+      <span class="meta-divider"></span>
+      <span>PhD · NTU</span>
+    </div>
+
+  </div>
+
+
+  <!-- RESEARCH VISUAL -->
+
+  <aside class="hero-aside">
+
+    <div class="aside-index">
+      <span>RESEARCH NOTES</span>
+      <span>001—003</span>
+    </div>
+
+    <div class="orbit-art" aria-hidden="true">
+
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="orbit orbit-three"></div>
+
+      <span class="orbit-center">?</span>
+
+      <span class="orbit-tick tick-one"></span>
+      <span class="orbit-tick tick-two"></span>
+      <span class="orbit-tick tick-three"></span>
+
+      <span class="orbit-label label-one">SIGNALS</span>
+      <span class="orbit-label label-two">EVIDENCE</span>
+      <span class="orbit-label label-three">CONTROL</span>
+
+    </div>
+
+    <div class="aside-caption">
+      <span class="caption-glyph">↘</span>
+      <p>
+        Understand the signal.<br>
+        Question the evidence.<br>
+        Change the behaviour.
+      </p>
+    </div>
+
+  </aside>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section class="intro-section" id="about">
+
+  <div class="section-aside">
+    <span class="eyebrow">ABOUT / 01</span>
+    <span class="section-rule"></span>
+  </div>
+
+  <div class="intro-content">
+
+    <h2>
+      Curious about what happens<br>
+      <em>before</em> the answer.
+    </h2>
+
+    <div class="about-body">
+      {{ content }}
+    </div>
+
+    <div class="interest-list">
+
+      <span>Current interests</span>
+
+      <div>
+        <span>AI Safety</span>
+        <span>Interpretability</span>
+        <span>Model Introspection</span>
+        <span>Trustworthy LLMs</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RESEARCH SECTION -->
+
+<section class="section research-section" id="research">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="eyebrow">SELECTED RESEARCH / 02</span>
+      <h2>Questions made concrete.</h2>
+    </div>
+
+    <p>
+      PhD and manuscript work focused on the
+      reliability of machine learning systems,
+      from evidence-aware LLMs to robust medical AI.
+    </p>
+
+  </div>
+
+  <div class="research-grid">
+
+    {% for project in site.data.research %}
+
+    <article class="research-card">
+
+      <div class="project-top">
+
+        <span class="project-index">
+          {{ project.number }} / {{ project.short_title }}
+        </span>
+
+        <span class="project-status">
+          {{ project.status }}
+        </span>
+
+      </div>
+
+      <div class="project-content">
+
+        <p class="project-category">
+          {{ project.category }}
+        </p>
+
+        <h3>{{ project.title }}</h3>
+
+        <p>{{ project.summary }}</p>
+
+      </div>
+
+      <div class="project-bottom">
+
+        <div class="tags">
+          {% for tag in project.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+        {% if project.links %}
+        <div class="card-links">
+          {% for link in project.links %}
+          <a href="{{ link.url }}" target="_blank"
+             rel="noopener noreferrer">
+            {{ link.label }} ↗
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+
+    </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<!-- RESEARCH THROUGHLINE -->
+
+<section class="throughline-section">
+
+  <div class="throughline-heading">
+
+    <span class="eyebrow light">
+      THE THROUGHLINE / 03
+    </span>
+
+    <span class="throughline-symbol">✳</span>
+
+  </div>
+
+  <div class="throughline-main">
+
+    <h2>
+      Reliability is more than<br>
+      <em>getting an answer right.</em>
+    </h2>
+
+    <p>
+      Across different domains, I keep returning
+      to the same idea: can we recognise when
+      a system is headed toward an unreliable
+      decision—and give it a better action to take?
+    </p>
+
+  </div>
+
+  <div class="throughline-steps">
+
+    <div>
+      <span>01 / Observe</span>
+      <p>Find the evidence and model signals that matter.</p>
+    </div>
+
+    <div>
+      <span>02 / Understand</span>
+      <p>Ask what those signals reveal—and what they do not.</p>
+    </div>
+
+    <div>
+      <span>03 / Intervene</span>
+      <p>Retrieve, verify, abstain, or steer more carefully.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INDEPENDENT EXPLORATIONS -->
+
+<section class="section explorations-section" id="explorations">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="eyebrow">
+        INDEPENDENT EXPLORATIONS / 04
+      </span>
+
+      <h2>Following the interesting questions.</h2>
+    </div>
+
+    <p>
+      Smaller studies, emerging research directions,
+      and experiments outside my primary thesis work.
+    </p>
+
+  </div>
+
+  <div class="exploration-list">
+
+    {% for item in site.data.explorations %}
+
+    <article class="exploration-item">
+
+      <span class="exploration-number">
+        {{ item.number }}
+      </span>
+
+      <div class="exploration-copy">
+
+        <div class="exploration-title-row">
+
+          <h3>{{ item.title }}</h3>
+
+          <span class="exploration-status">
+            {{ item.status }}
+          </span>
+
+        </div>
+
+        <p>{{ item.summary }}</p>
+
+        <div class="tags">
+          {% for tag in item.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+      </div>
+
+    </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<!-- WRITING PREVIEW -->
+
+<section class="writing-preview">
+
+  <div>
+
+    <span class="eyebrow">
+      WRITING / A WORK IN PROGRESS
+    </span>
+
+    <h2>
+      A place to think<br>
+      <em>out loud.</em>
+    </h2>
+
+    <p>
+      Research notes, paper reflections, and attempts
+      to make difficult ideas a little clearer.
+      Not every thought needs to be a paper
+      to be worth developing.
+    </p>
+
+    <a class="primary-link" href="{{ '/writing/' | relative_url }}">
+      Explore writing <span>↗</span>
+    </a>
+
+  </div>
+
+  <div class="writing-sample">
+
+    <span class="writing-sample-label">
+      FIELD NOTES
+    </span>
+
+    {% if site.posts.size > 0 %}
+
+      {% for post in site.posts limit:2 %}
+
+      <a class="sample-post" href="{{ post.url | relative_url }}">
+
+        <span>{{ post.date | date: '%d %b %Y' }}</span>
+
+        <strong>{{ post.title }}</strong>
+
+        <span>↗</span>
+
+      </a>
+
+      {% endfor %}
+
+    {% else %}
+
+      <div class="empty-notebook">
+
+        <span class="notebook-asterisk">✳</span>
+
+        <p>
+          Notes, questions,<br>
+          and unfinished ideas.
+        </p>
+
+        <small>First essays forthcoming</small>
+
+      </div>
+
+    {% endif %}
+
+  </div>
+
+</section>
