@@ -1,0 +1,20 @@
+
+# Independent explorations and side projects
+
+- number: "01"
+  title: "Jailbreak brittleness across model sizes"
+  status: "Exploratory study"
+  summary: "Comparing smaller and larger language models to ask whether jailbreak susceptibility reflects capability limitations, alignment brittleness, or both."
+  tags:
+    - "LLM safety"
+    - "Jailbreaks"
+    - "Activation probes"
+
+- number: "02"
+  title: "Model introspection and self-knowledge"
+  status: "Research direction"
+  summary: "Developing small, testable questions about whether models can recognise learned behaviours, and whether internal signals can support meaningful monitoring or intervention."
+  tags:
+    - "Introspection"
+    - "Mechanistic interpretability"
+    - "Monitoring"
