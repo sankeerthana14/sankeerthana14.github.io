@@ -1,4 +1,3 @@
-
 ---
 title: "Why I'm Interested in AI Safety"
 description: "Some early thoughts on AI safety, interpretability, and understanding model behaviour."
